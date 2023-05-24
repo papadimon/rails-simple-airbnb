@@ -1,0 +1,18 @@
+<div class="container">
+  <br>
+  <h1>Add a New Flat</h1>
+  <br>
+    <%= simple_form_for [@flat] do |f| %>
+      <%= f.input :name %>
+      <br>
+      <%= f.input :address %>
+      <br>
+      <%= f.input :desciption %>
+      <br>
+      <%= f.input :price_per_night, as: :integer %>
+      <br>
+      <%= f.input :number_of_guests, as: :integer %>
+      <br>
+      <%= f.submit "Add a Flat", class: "btn btn-success" %>
+    <% end %>
+</div>

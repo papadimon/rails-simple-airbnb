@@ -1,0 +1,16 @@
+<div class="container mt-3">
+  <h1>All our Flats</h1>
+  <h2>Amount of flats: <%= "#{@flats.length}" %></h2>
+  <div class="d-flex">
+    <% @flats.each do |flat| %>
+      <div class="d-flex flex-column card" style="width: 18rem;">
+        <div><%= flat.name %></div>
+        <div><%= flat.address %></div>
+        <div><%= flat.desciption %></div>
+        <div><%= flat.price_per_night %></div>
+        <div><%= flat.number_of_guests %></div>
+      </div>
+    <% end %>
+  </div>
+    <%= link_to "Add a Flat", new_flat_path, class: "btn btn-primary" %>
+</div>
